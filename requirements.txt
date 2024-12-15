@@ -121,15 +121,6 @@ pydeck==0.9.1
 PyGetWindow==0.0.9
 Pygments==2.18.0
 PyJWT==2.9.0
-PyMsgBox==1.0.9
-pyparsing==3.1.4
-pyperclip==1.9.0
-PyRect==0.2.0
-PyScreeze==1.0.1
-python-dateutil==2.9.0.post0
-python-dotenv==1.0.1
-python-json-logger==2.0.7
-pyttsx3==2.97
 pytweening==1.2.0
 pytz==2024.1
 pyzmq==26.2.0
@@ -171,7 +162,6 @@ tenacity==8.5.0
 tensorboard==2.18.0
 tensorboard-data-server==0.7.2
 tensorflow==2.18.0
-tensorflow_intel==2.18.0
 termcolor==2.4.0
 terminado==0.18.1
 terminaltables==3.1.10
