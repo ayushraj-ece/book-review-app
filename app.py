@@ -67,4 +67,5 @@ def upload():
         return jsonify({'error': str(e)}), 500
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    port = os.getenv("PORT", 10000)  # Get port from environment or default to 10000
+    app.run(debug=True, host="0.0.0.0", port=int(port))  # Ensure the app binds to the correct port
