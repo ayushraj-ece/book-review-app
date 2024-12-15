@@ -1,3 +1,5 @@
+Flask
+google-generativeai
 absl-py
 altair
 argon2-cffi
@@ -13,9 +15,7 @@ colorama
 cryptography
 cvzone
 decorator
-fastjsonschema
 filelock
-flask
 google-api-core
 google-auth
 google-auth-httplib2
@@ -23,7 +23,6 @@ google-cloud-storage
 grpcio
 h11
 matplotlib
-ml-dtypes
 numpy
 opencv-contrib-python
 opencv-python
