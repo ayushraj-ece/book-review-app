@@ -31,17 +31,36 @@ def upload():
 
         # Example Prompt with Concise Summary and Combined Review
         prompt = (
-            "Analyze the uploaded book cover image or ISBN and provide the following details:\n\n"
-            "Title: <book_title>\n"
-            "Author: <book_author>\n"
-            "Genre: <book_genre>\n"
-            "Summary: Provide a concise summary of the book in three sections with two-line gaps between them. "
-            "The first section should cover the main plot and storyline, "
-            "the second should focus on key characters and their roles, "
-            "and the third should discuss the themes or key messages the book conveys.\n\n"
-            "Review: Provide a brief, balanced review of the book. Mention both positive and negative aspects, "
-            "highlighting what readers may enjoy and what might not appeal to everyone.\n\n"
-            "If the image is invalid or unrelated to books, respond with: 'Invalid image.'"
+            "Analyze the uploaded book cover image or ISBN and provide the following details in a structured, easy-to-read format with the following subheadings: Title, Author, Genre, Summary, and Review.\n\n"
+
+            "1. **Title:**\n"
+            "    - Provide the **full title** of the book. \n"
+
+            "\n2. **Author:**\n"
+            "    - Provide the **author's full name**. If the book is written by multiple authors, list them all in the order in which they are credited. If there is an editor or an introduction by someone notable, mention them, but ensure the main author is clearly identified.\n"
+
+            "\n3. **Genre:**\n"
+            "    - Identify the **primary genre** of the book. Examples include fiction (literary, historical, science fiction), non-fiction (biography, self-help, memoir), or subgenres like fantasy, mystery, thriller, romance, etc. Be specific, but don’t include niche subgenres unless they are significant to the book’s identity.\n"
+
+            "\n4. **Summary:**\n"
+            "    - Provide a **brief summary** of the book. This summary should highlight the key plot elements and the overall story arc. However, **do not reveal major plot twists or resolutions** as it may spoil the reader’s experience.\n"
+            "        - **Main Plot and Storyline:** Briefly summarize the **central storyline**. Focus on introducing the setting, the primary conflict, and the direction of the narrative, but avoid spoiling how the plot develops or resolves. Keep the description high-level, without too many specifics on character fates or key twists.\n"
+            "        - **Key Characters and Their Roles:** Briefly describe **the protagonist(s)** and **major secondary characters**, focusing on their roles and relationships. Do not give away character arcs or motivations that are central to the plot’s suspense. Mention their general traits and roles in the story, but avoid spoiling their development.\n"
+            "        - **Themes and Key Messages:** Identify **the primary themes** of the book without giving away how they unfold in the plot. Themes could include love, justice, betrayal, redemption, or self-discovery. Do not mention how these themes are developed in the plot, keeping this section vague to preserve the suspense.\n"
+
+            "\n5. **Review:**\n"
+            "    - **Positive Aspects:** Focus on the **strengths** of the book, highlighting aspects that stand out, such as writing style, character development, the way the suspense is built, the pacing, or how the book keeps the reader engaged. Mention what makes the book exciting or enjoyable without revealing plot details. Emphasize what types of readers might enjoy it, such as fans of suspense, thrillers, or specific genres.\n"
+            "        - Be specific about what you liked—describe the **atmosphere**, **writing style**, **character complexity**, or **emotional impact** that makes the book memorable.\n"
+            "    - **Negative Aspects:** Offer a balanced view by mentioning **any weaknesses** or areas where the book may not appeal to everyone. This could include **predictability**, **slow pacing**, or sections where the suspense might feel lacking. However, **avoid revealing plot points** that might spoil the experience for readers. Focus on general aspects, such as pacing issues, or if the book might not work for certain reader preferences.\n"
+            "        - Be careful not to mention plot details or spoilers. For example, avoid stating whether the protagonist succeeds or fails in their quest.\n"
+            "    - **Recommendation:** Suggest **who should read** the book based on the content and themes, like fans of specific genres (e.g., mystery, thriller, fantasy). Explain **why** this book might appeal to them. Then, explain **who might not enjoy** the book, like readers who dislike slow-burn plots or those who don’t enjoy suspenseful stories. This should help potential readers decide if the book is right for them.\n"
+
+            "Please ensure the following formatting guidelines:\n"
+            "    - Each section should have a **bold** subheading, followed by the content in clear, readable paragraphs.\n"
+            "    - Maintain **appropriate spacing** between sections to ensure the content is well-organized and easy to read.\n"
+            "    - Avoid using asterisks, underscores, or any symbols for bold or emphasis. Instead, use **direct bold formatting** in the text.\n"
+            "    - Focus on preserving **suspense** by not revealing key plot points, twists, or resolutions. The summary and review should keep the mystery intact for the reader.\n"
+            "    - If the image is invalid or unrelated to books, respond with: 'Invalid image.'"
         )
 
         # Send the prompt to the Gemini API
