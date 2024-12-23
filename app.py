@@ -3,7 +3,7 @@ import google.generativeai as genai
 from PIL import Image
 import io
 import os
-import json
+import json 
 
 app = Flask(__name__)
 
