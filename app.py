@@ -12,9 +12,15 @@ genai.configure(api_key=API_KEY)
 
 model = genai.GenerativeModel("gemini-1.5-flash")
 
+MAINTENANCE_MODE = True  # toggle this variable as needed
+
 @app.route('/')
 def index():
-    return render_template('index.html')
+    if MAINTENANCE_MODE:
+        return render_template('sitedown.html')
+    else:
+        return render_template('index.html')
+
 
 @app.route('/upload', methods=['POST'])
 def upload():
